@@ -2,7 +2,7 @@ using NPCLibrary.Models;
 
 namespace NPCLibrary.Controllers;
 
-public class NPCController
+public class NpcController
 {
 	private List<NPC> _npcs = new List<NPC>();
 	

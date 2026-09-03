@@ -15,13 +15,9 @@ public static class ConsolePrinter
 		Thread.Sleep(1500);
 	}
 
-	public static void Print(string text)
+	public static void PrintMenu(string text)
 	{
-		Console.Clear();
-		
 		Console.WriteLine(text);
-		
-		Thread.Sleep(1500);
 	}
 
 	private static void CenterConsole(string text)

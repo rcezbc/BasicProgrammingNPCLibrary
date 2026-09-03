@@ -2,7 +2,7 @@ namespace NPCLibrary.UI;
 
 public static class ConsolePrinter
 {
-	public static void Print(string text)
+	public static void PrintCentered(string text)
 	{
 		//Make sure we have no other dirt in the console.
 		Console.Clear();
@@ -12,6 +12,15 @@ public static class ConsolePrinter
 		Console.WriteLine(text);
 		
 		// Add a delay, to make sure the user has time to read the displayed text.
+		Thread.Sleep(1500);
+	}
+
+	public static void Print(string text)
+	{
+		Console.Clear();
+		
+		Console.WriteLine(text);
+		
 		Thread.Sleep(1500);
 	}
 

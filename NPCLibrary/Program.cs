@@ -13,7 +13,10 @@ internal static class Program
 		
 		while(true)
 		{
+			Menu.ShowMenu();
 			
+			//Clean the console and return to the menu
+			ConsolePrinter.PrintCentered("Returning to Main Menu...");
 		}
 	}
 }

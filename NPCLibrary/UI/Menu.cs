@@ -29,10 +29,19 @@ public static class Menu
 			(legalChoice, menuChoice) = AskForMenuChoice();
 		} while(! legalChoice);
 
-		// Handle the menu choice
+		// Handle the menu choice - We don't have a default case, because we assume the above code enforces only valid values.
 		switch(menuChoice)
 		{
-			
+			case 1:
+				ConsolePrinter.PrintCentered("Listing all NPCs...");
+				
+				break;
+			case 2:
+				ConsolePrinter.PrintCentered("Showing NPC...");
+				break;
+			case 3:
+				ConsolePrinter.PrintCentered("Let's create an NPC...");
+				break;
 		}
 	}
 

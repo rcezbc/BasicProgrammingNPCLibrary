@@ -2,9 +2,9 @@ using NPCLibrary.Models;
 
 namespace NPCLibrary.Controllers;
 
-public class NpcController
+public static class NpcController
 {
-	private List<NPC> _npcs = new List<NPC>();
+	private static List<NPC> _npcs = new List<NPC>();
 	
 	/// <summary>
 	/// Creates and stores a new NPC with the provided details.
@@ -19,7 +19,7 @@ public class NpcController
 	/// <param name="agility">An optional new agility value for the NPC.</param>
 	/// <param name="vitality">An optional new vitality value for the NPC.</param>
 	/// <returns>The newly created NPC object.</returns>
-	public NPC Create(
+	public static NPC Create(
 		string firstName, string lastName, DateTime dateOfBirth, string gender,
 		string? description, string? notes, int? strength, int? agility, int? vitality)
 	{
@@ -34,7 +34,7 @@ public class NpcController
 	/// Returns an array of all NPCs currently stored.
 	/// </summary>
 	/// <returns>An array of NPC objects.</returns>
-	public NPC[] List()
+	public static NPC[] List()
 	{
 		//TODO: Consider only returning the name of the npcs
 		return _npcs.ToArray();
@@ -45,7 +45,7 @@ public class NpcController
 	/// </summary>
 	/// <param name="npcNumber">The zero-based index of the NPC to retrieve.</param>
 	/// <returns>The NPC object at the specified index.</returns>
-	public NPC Show(int npcNumber)
+	public static NPC Show(int npcNumber)
 	{
 		return _npcs[npcNumber];
 	}
@@ -61,7 +61,7 @@ public class NpcController
 	/// <param name="agility">An optional new agility value for the NPC.</param>
 	/// <param name="vitality">An optional new vitality value for the NPC.</param>
 	/// <returns>The updated NPC object.</returns>
-	public NPC Update(int npcNumber, string? description, string? notes, int? strength, int? agility, int? vitality)
+	public static NPC Update(int npcNumber, string? description, string? notes, int? strength, int? agility, int? vitality)
 	{
 		NPC npcWeWorkOn = _npcs[npcNumber];
 		

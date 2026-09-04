@@ -1,3 +1,6 @@
+using NPCLibrary.Actions;
+using NPCLibrary.Controllers;
+
 namespace NPCLibrary.UI;
 
 public static class Menu
@@ -34,13 +37,13 @@ public static class Menu
 		{
 			case 1:
 				ConsolePrinter.PrintCentered("Listing all NPCs...");
-				
 				break;
 			case 2:
 				ConsolePrinter.PrintCentered("Showing NPC...");
 				break;
 			case 3:
 				ConsolePrinter.PrintCentered("Let's create an NPC...");
+				NpcCreate.Execute();
 				break;
 		}
 	}

@@ -36,12 +36,17 @@ public static class NpcCreate
 		ConsolePrinter.PrintCentered("Please provide a Vitality (optional)");
 		string vitality = Console.ReadLine();
 		
+		DateTime dateTimeDateOfBirth = DateTime.Parse(dateOfBirth);
+		int strengthValue = int.Parse(strength);
+		int agilityValue = int.Parse(agility);
+		int vitalityValue = int.Parse(vitality);
+		
 		//Create the NPC
 		NPC npc = NpcController.Create(
 			firstName:firstName, lastName:lastName, 
-			dateOfBirth:dateOfBirth, gender:gender, 
-			description:description, notes:notes, strength:strength, 
-			agility:agility, vitality:vitality);
+			dateOfBirth:dateTimeDateOfBirth, gender:gender, 
+			description:description, notes:notes, strength:strengthValue, 
+			agility:agilityValue, vitality:vitalityValue);
 		
 		//TODO: Persist the NPC
 		
